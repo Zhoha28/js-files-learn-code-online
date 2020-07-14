@@ -9,12 +9,22 @@ console.log(` ${myYoutubeVideo.title} by ${myYoutubeVideo.videoLength}`)
 
 // assignment object author name, price, desc
 
-const locCourse = {
-  author: 'Hitesh',
-  courseName: 'JS all new',
-  coursePrice: 599,
-  courseDescription: 'This is a brand new course'
-}
-locCourse.author = 'Zhoha'
+// const locCourse = {
+//   title: 'Loos in JS2',
+//   videoLength: '10',
+//   videoDescription: 'This is a video about JavaScript2'
+// }
+// locCourse.author = 'Zhoha'
 
-console.log(`Hey guys, check out the new course ${locCourse.courseName} by author ${locCourse.author}. It is available at Rs. ${locCourse.coursePrice} only`)
+// console.log(`Hey g/uys, check out the new course ${locCourse.courseName} by author ${locCourse.author}. It is available at Rs. ${locCourse.coursePrice} only`)
+
+const changeVideoMinutes = function (myObject) {
+  return {
+    formatOne: `the time of this video is ${myObject.videoLength + 5} `,
+    formatTwo: `the time of this video is ${myObject.videoLength} `
+
+  }
+}
+
+const addone = changeVideoMinutes(myYoutubeVideo)
+console.log(addone.formatOne)
