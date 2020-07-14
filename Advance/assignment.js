@@ -21,7 +21,15 @@ const todos = [{
   isDone: false
 }
 ]
-const todoNotDone = todos.filter((todo) => todo.isDone === false)
 
-todoNotDone.forEach(todoNotDone => console.log(todoNotDone.title))
-// console.log(todoNotDone)
+const notDoneTodo = todos.filter(todo => {
+  if (todo.isDone === false) {
+    console.log(todo.title)
+  }
+})
+
+// using for each loop
+
+// notDoneTodo.forEach(element => console.log(element.title))
+
+console.log(notDoneTodo)
