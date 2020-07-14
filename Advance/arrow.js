@@ -10,7 +10,7 @@
 const sayHello = (name) => {
   return `Hey there, I am here, ${name}.`
 }
-console.log(sayHello('sam'))
+// console.log(sayHello('sam'))
 
 // convert to shorthand arrow function
 
@@ -18,7 +18,7 @@ console.log(sayHello('sam'))
 // 2. remove curly braces and the return keyword as well
 // 3. everything should come on same line
 const sayHello2 = (name) => `Hey there, I am here, ${name}.`
-console.log(sayHello2('sam1'))
+// console.log(sayHello2('sam1'))
 
 const todos = [{
   title: 'Buy Bread',
@@ -32,8 +32,21 @@ const todos = [{
 }]
 
 const todoDone = todos.filter((todo) => todo.isDone === true)
-console.log(todoDone)
+// console.log(todoDone)
 
 // assignment
 // create a todolist with 3 true 3 false
 // not done, filter, print only not done print its title only
+
+const cameras = {
+  price : 600,
+  weight : 200,
+  myDes: () => {
+    return `this canon camera is for Rs. ${this.price}`
+  }
+}
+// avoid using arrow functions in methods and constructors as it will give this binding errors.
+console.log(cameras.myDes())
+
+// only for redux
+// const func = () => ({key: 'value' })
